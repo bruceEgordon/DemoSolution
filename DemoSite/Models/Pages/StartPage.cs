@@ -11,14 +11,20 @@ namespace DemoSite.Models.Pages
         Description = "Use this to create the starting page for the site.", GroupName = "Specialized")]
     public class StartPage : PageData
     {
+        [UIHint("h1")]
+        [CultureSpecific]
+        [Display(Name = "Heading", Description = "If the Heading is not set, the page falls back to showing the Name.",
+            GroupName = SystemTabNames.Content, Order = 10)]
+        public virtual string Heading { get; set; }
 
         [CultureSpecific]
         [Display(
             Name = "Main body",
             Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
             GroupName = SystemTabNames.Content,
-            Order = 1)]
+            Order = 20)]
         public virtual XhtmlString MainBody { get; set; }
+        
 
     }
 }
