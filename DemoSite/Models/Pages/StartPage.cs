@@ -24,7 +24,8 @@ namespace DemoSite.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 20)]
         public virtual XhtmlString MainBody { get; set; }
-        
 
+        [Display(GroupName = SiteTabNames.Contact)]
+        public virtual string Phone { get; set; }
     }
 }
