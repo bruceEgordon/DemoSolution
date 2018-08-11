@@ -21,18 +21,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.PageLink("Home", ContentReference.StartPage, null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
                         @if(User.Identity.IsAuthenticated)
                         {
-                            <a class="nav-item" href="/en/logout">Log out</a>
+                            <a class="nav-item nav-link" href="/en/logout">Log out</a>
                         }
                         else
                         {
-                            <a class="nav-item nav-link" href="@FormsAuthentication.LoginUrl?ReturnUrl=@EPiServer.Web.Routing.UrlResolver.Current.GetUrl(Model.CurrentPage.PageLink)">
+                            <a class="nav-item nav-link" href="@FormsAuthentication.LoginUrl?ReturnUrl=@Url.PageUrl(Model.CurrentPage.LinkURL)">
                                 Log in
                             </a>
                         }
