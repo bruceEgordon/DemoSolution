@@ -9,14 +9,12 @@ using EPiServer.Web.Mvc;
 
 namespace DemoSite.Controllers
 {
-    public class StartPageController : PageController<StartPage>
+    public class StartPageController : PageControllerBase<StartPage>
     {
+        public StartPageController(IContentLoader loader) : base(loader) { }
         public ActionResult Index(StartPage currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
-
-            return View(currentPage);
+            return View(CreatePageViewModel(currentPage));
         }
     }
 }

@@ -1,11 +1,8 @@
-﻿@model DemoSite.Models.Pages.StartPage
+﻿@using DemoSite.Models.ViewModels
+@model PageViewModel<DemoSite.Models.Pages.StartPage>
 
-@*<h1 @Html.EditAttributes(m => m.Heading)>
-    @(Model.Heading ?? Model.Name)
-</h1>*@
-
-@Html.PropertyFor(m => m.Heading)
+@Html.PropertyFor(m => m.CurrentPage.Heading)
 
 <div>
-    @Html.PropertyFor(m => m.MainBody)
+    @Html.PropertyFor(m => m.CurrentPage.MainBody)
 </div>
