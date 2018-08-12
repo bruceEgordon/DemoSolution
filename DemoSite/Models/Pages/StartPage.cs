@@ -10,6 +10,7 @@ namespace DemoSite.Models.Pages
 {
     [ContentType(DisplayName = "Start Page", GUID = "2e595bed-e770-44c2-86dc-7b930d8a6421",
         Description = "Use this to create the starting page for the site.", GroupName = "Specialized")]
+    [AvailableContentTypes(Include = new[] { typeof(StandardPage), typeof(TypedPageWithAttributeSample) })]
     public class StartPage : PageData
     {
         [UIHint("h1")]

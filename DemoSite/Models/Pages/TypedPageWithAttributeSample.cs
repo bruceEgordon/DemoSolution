@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using DemoSite.Business.SelectionFactories;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using EPiServer.Shell.ObjectEditing;
 using EPiServer.SpecializedProperties;
 
 namespace DemoSite.Models.Pages
@@ -21,6 +23,9 @@ namespace DemoSite.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
+
+        [SelectOne(SelectionFactoryType = typeof (WorkStatusSelectionFactory))]
+        public virtual string WorkStatus { get; set; }
 
     }
 }
