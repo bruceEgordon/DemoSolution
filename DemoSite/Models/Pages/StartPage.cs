@@ -29,5 +29,9 @@ namespace DemoSite.Models.Pages
 
         [Display(GroupName = SiteTabNames.Contact)]
         public virtual string Phone { get; set; }
+
+        [Display(Name = "Main Conent Area",
+            Order = 40)]
+        public virtual ContentArea MainContentArea { get; set; }
     }
 }
