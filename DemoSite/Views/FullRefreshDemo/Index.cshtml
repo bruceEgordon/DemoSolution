@@ -1,0 +1,19 @@
+﻿@using DemoSite.Models.ViewModels
+@using DemoSite.Models.Pages
+@model PageViewModel<FullRefreshDemo>
+
+@Html.FullRefreshPropertiesMetaData(new[] { "ShowBanner" })
+
+Show Banner:
+@Html.PropertyFor(m => m.CurrentPage.ShowBanner)
+
+@if (Model.CurrentPage.ShowBanner)
+{
+    <h2 @Html.EditAttributes(m => m.CurrentPage.BannerText)>
+        @Model.CurrentPage.BannerText
+    </h2>
+}
+
+@Html.PropertyFor(m => m.CurrentPage.MainBody)
+
+

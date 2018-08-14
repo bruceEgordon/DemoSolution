@@ -25,6 +25,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @foreach(PageData page in Model.MenuPages)
+                    {
+                        <li>@Html.ContentLink(page.ContentLink, null, new { @class = "nav-item nav-link" })</li>
+                    }
                     <li>
                         @if(User.Identity.IsAuthenticated)
                         {

@@ -235,6 +235,7 @@
     <Compile Include="Business\Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\WorkStatusSelectionFactory.cs" />
+    <Compile Include="Controllers\FullRefreshDemoController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,6 +243,7 @@
     </Compile>
     <Compile Include="Models\Media\GenericFile.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Pages\FullRefreshDemo.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Pages\TypedPageWithAttributeSample.cs" />
@@ -334,6 +336,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\h1.cshtml" />
+    <Content Include="Views\FullRefreshDemo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
