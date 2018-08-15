@@ -232,9 +232,11 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\Initialization\DisplayOptionsInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\WorkStatusSelectionFactory.cs" />
+    <Compile Include="Controllers\StandardPagesPartialController.cs" />
     <Compile Include="Controllers\FullRefreshDemoPartialController.cs" />
     <Compile Include="Controllers\FullRefreshDemoController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
@@ -341,6 +343,9 @@
     <Content Include="Views\FullRefreshDemo\Index.cshtml" />
     <Content Include="Views\FullRefreshDemoPartial\Index.cshtml" />
     <Content Include="Views\Shared\ImageFile.cshtml" />
+    <Content Include="Views\Shared\Full.cshtml" />
+    <Content Include="Views\Shared\Wide.cshtml" />
+    <Content Include="Views\Shared\Narrow.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

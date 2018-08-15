@@ -1,0 +1,12 @@
+﻿@using DemoSite.Models.ViewModels
+@using DemoSite.Models.Pages
+@model PageViewModel<StandardPage>
+
+<div class="block span4" style="background-color: palegreen">
+    <div class="border">
+        <h4>Standard Page Narrow View</h4>
+        <a href="@Url.ContentUrl(Model.CurrentPage.ContentLink)">
+            @Html.PropertyFor(m => m.CurrentPage.MainBody)
+        </a>
+    </div>
+</div>
