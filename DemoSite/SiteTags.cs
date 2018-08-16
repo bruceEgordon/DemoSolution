@@ -7,8 +7,8 @@ namespace DemoSite
 {
     public class SiteTags
     {
-        public const string Full = "Full";
-        public const string Wide = "Wide";
-        public const string Narrow = "Narrow";
+        public const string Full = "full";
+        public const string Wide = "wide";
+        public const string Narrow = "narrow";
     }
 }

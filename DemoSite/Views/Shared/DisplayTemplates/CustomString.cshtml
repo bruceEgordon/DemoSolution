@@ -1,0 +1,11 @@
+﻿@model string
+
+@{ 
+    string classStr = string.Empty;
+}
+
+@if (ViewData.ContainsKey("BrucesClass"))
+{
+    classStr = ViewData["BrucesClass"].ToString();
+}
+<div class="@classStr">@Model</div>

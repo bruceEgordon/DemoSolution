@@ -1,0 +1,6 @@
+﻿@using DemoSite.Models.ViewModels
+@using DemoSite.Models.Pages
+@model PageViewModel<PropertyForPageTest>
+
+@Html.PropertyFor(m => m.CurrentPage.CustomizedString,
+    new { BrucesClass = "alert-danger"})
